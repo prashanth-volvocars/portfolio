@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { SimpleTypewriter } from "./ui/typewriter";
 
 export function HeroSection() {
   const scrollToAbout = () => {
@@ -18,8 +19,33 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 py-32 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Image */}
+          <div className="relative lg:justify-self-start order-2 lg:order-1">
+            <div className="relative aspect-square max-w-lg mx-auto">
+              {/* Decorative elements */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-2xl"></div>
+
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-muted border border-border/50 shadow-2xl">
+                <ImageWithFallback
+                  src="/images/prashanth-profile.JPG"
+                  alt="Prashanth Ramadass - Cloud-native Full Stack Engineer"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+
+              {/* Experience badge */}
+              <div className="absolute -bottom-8 -right-8 bg-background border border-border shadow-xl p-6 rounded-2xl backdrop-blur-sm">
+                <div className="text-center">
+                  <div className="text-3xl font-medium bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">10+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Years</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Text Content */}
-          <div className="space-y-10">
+          <div className="space-y-10 order-1 lg:order-2">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -28,10 +54,11 @@ export function HeroSection() {
 
               <div className="space-y-4">
                 <h1 className="text-6xl lg:text-7xl leading-[0.9] tracking-tight">
-                  <span className="block text-foreground">Prashanth</span>
-                  <span className="block text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                    Ramadass
-                  </span>
+                  <SimpleTypewriter
+                    text="Prashanth Ramadass"
+                    delay={150}
+                    className="text-foreground"
+                  />
                 </h1>
                 <p className="text-xl lg:text-2xl text-muted-foreground max-w-xl leading-relaxed">
                   Cloud-native Full Stack Engineer with
@@ -81,30 +108,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="relative lg:justify-self-end">
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Decorative elements */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl blur-2xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-2xl"></div>
 
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-muted border border-border/50 shadow-2xl">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzU2NDQzODAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Prashanth Ramadass - Cloud-native Full Stack Engineer"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-
-              {/* Experience badge */}
-              <div className="absolute -bottom-8 -right-8 bg-background border border-border shadow-xl p-6 rounded-2xl backdrop-blur-sm">
-                <div className="text-center">
-                  <div className="text-3xl font-medium bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">10+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Years</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Scroll indicator */}

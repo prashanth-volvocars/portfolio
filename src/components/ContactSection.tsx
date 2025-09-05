@@ -6,6 +6,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 import { useState } from "react";
+import React from "react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -66,18 +67,18 @@ export function ContactSection() {
             <span className="text-sm text-muted-foreground">Get In Touch</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-medium mb-8 max-w-3xl mx-auto leading-tight">
-            Let's work 
+            Let's work
             <span className="text-primary">together</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm always interested in hearing about new opportunities and exciting projects. 
+            I'm always interested in hearing about new opportunities and exciting projects.
             Feel free to reach out if you'd like to discuss working together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-1 gap-16 max-w-3xl mx-auto">
           {/* Contact Form */}
-          <Card className="shadow-xl border-0 bg-background/80 backdrop-blur-sm">
+          {/* <Card className="shadow-xl border-0 bg-background/80 backdrop-blur-sm">
             <CardHeader className="pb-8">
               <CardTitle className="text-2xl">Send me a message</CardTitle>
             </CardHeader>
@@ -148,7 +149,7 @@ export function ContactSection() {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Contact Information */}
           <div className="space-y-8">
@@ -165,8 +166,8 @@ export function ContactSection() {
                     <div>
                       <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
                       {info.action ? (
-                        <a 
-                          href={info.action} 
+                        <a
+                          href={info.action}
                           className="text-lg font-medium hover:text-primary transition-colors duration-200"
                         >
                           {info.value}
@@ -187,10 +188,10 @@ export function ContactSection() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   {socialLinks.map((social, index) => (
-                    <Button 
-                      key={index} 
-                      variant="outline" 
-                      className="justify-start h-12 border-2 hover:bg-primary/5 hover:border-primary/20 transition-all duration-300" 
+                    <Button
+                      key={index}
+                      variant="outline"
+                      className="justify-start h-12 border-2 hover:bg-primary/5 hover:border-primary/20 transition-all duration-300"
                       asChild
                     >
                       <a href={social.url} target="_blank" rel="noopener noreferrer">
@@ -211,7 +212,7 @@ export function ContactSection() {
                   <div>
                     <h3 className="text-lg font-medium mb-3">Available for freelance work</h3>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
-                      I'm currently available for new projects and opportunities. 
+                      I'm currently available for new projects and opportunities.
                       Let's discuss how I can help bring your ideas to life.
                     </p>
                     <Badge variant="default" className="px-3 py-1">

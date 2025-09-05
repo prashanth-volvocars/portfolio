@@ -30,7 +30,7 @@ export function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-lg font-medium text-primary hover:opacity-80 transition-opacity duration-200"
           >
-            {"<Prashanth />"}
+            {"<Prashanth Ramadass/>"}
           </button>
 
           {/* Desktop Navigation */}

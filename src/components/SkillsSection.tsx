@@ -1,47 +1,54 @@
+import React from "react";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Progress } from "./ui/progress";
 
 export function SkillsSection() {
+  // Function to calculate progress bar value based on years of experience
+  const calculateLevel = (years: number): number => {
+    // Linear scale: 1 year = 10%, 2 years = 20%, ..., 10 years = 100%
+    return Math.min(years * 10, 100);
+  };
+
   const skillCategories = [
     {
       title: "Languages & Frameworks",
       skills: [
-        { name: "NodeJS (TypeScript)", level: 95 },
-        { name: "Golang", level: 85 },
-        { name: "Java (Spring Boot)", level: 90 },
-        { name: "Rust", level: 75 },
-        { name: ".NET", level: 80 },
-        { name: "GraphQL", level: 90 }
+        { name: "NodeJS (TypeScript)", years: 8 },
+        { name: "Java (Spring Boot)", years: 4 },
+        { name: "Golang", years: 3 },
+        { name: ".NET", years: 1 },
+        { name: "Rust", years: 1 },
+        { name: "React (Next.js, Vue.js)", years: 4 },
       ]
     },
     {
-      title: "Cloud & Infrastructure", 
+      title: "Cloud & Infrastructure",
       skills: [
-        { name: "Kubernetes (EKS/AKS)", level: 95 },
-        { name: "AWS", level: 90 },
-        { name: "Azure", level: 85 },
-        { name: "Docker", level: 90 },
-        { name: "Terraform", level: 85 },
-        { name: "Helm", level: 90 }
+        { name: "Kubernetes (EKS/AKS)", years: 4 },
+        { name: "AWS", years: 7 },
+        { name: "Docker", years: 4 },
+        { name: "Azure", years: 2 },
+        { name: "Terraform", years: 3 },
+        { name: "Helm", years: 3 }
       ]
     },
     {
       title: "Databases & Observability",
       skills: [
-        { name: "Elasticsearch", level: 95 },
-        { name: "Redis", level: 85 },
-        { name: "DynamoDB", level: 80 },
-        { name: "MongoDB", level: 85 },
-        { name: "Prometheus", level: 90 },
-        { name: "Grafana", level: 90 }
+        { name: "Elasticsearch", years: 4 },
+        { name: "MongoDB", years: 1 },
+        { name: "Redis", years: 7 },
+        { name: "Prometheus", years: 3 },
+        { name: "Grafana", years: 3 },
+        { name: "DynamoDB", years: 1 }
       ]
-    }
+    },
   ];
 
   const tools = [
-    "GitHub Actions", "Jenkins", "TeamCity", "k6", "Selenium", "Playwright", 
-    "Mocha", "Jest", "Elastic APM", "Datadog", "CloudWatch", "InfluxDB"
+    "GitHub Actions", "Jenkins", "TeamCity", "K6", "Selenium", "Playwright",
+    "Mocha", "Jest", "Elastic APM", "Datadog", "CloudWatch",
   ];
 
   return (
@@ -53,7 +60,7 @@ export function SkillsSection() {
             Technologies I work with
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here's a comprehensive overview of the technologies and tools I use 
+            Here's a comprehensive overview of the technologies and tools I use
             to build modern, scalable applications.
           </p>
         </div>
@@ -69,9 +76,9 @@ export function SkillsSection() {
                   <div key={skillIndex} className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span>{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                      <span className="text-muted-foreground">{skill.years} years</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" />
+                    <Progress value={calculateLevel(skill.years)} className="h-2" />
                   </div>
                 ))}
               </CardContent>
