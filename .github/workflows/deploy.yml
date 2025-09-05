@@ -32,8 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy CNAME
-        run: cp CNAME ./dist/
+      - name: Copy CNAME and create .nojekyll
+        run: |
+          cp CNAME ./dist/
+          touch ./dist/.nojekyll
         if: github.ref == 'refs/heads/main'
 
       - name: Setup Pages
