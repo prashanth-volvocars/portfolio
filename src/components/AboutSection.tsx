@@ -17,12 +17,12 @@ export function AboutSection() {
     {
       icon: <Database size={24} />,
       title: "Observability & Data",
-      description: "Elasticsearch, Redis, DynamoDB, MongoDB, Elastic APM, Prometheus, Grafana"
+      description: "PostgreSQL, Elasticsearch, Redis, DynamoDB, MongoDB, Elastic APM, Prometheus, Grafana"
     },
     {
       icon: <Globe size={24} />,
       title: "DevOps & Testing",
-      description: "GitHub Actions, Jenkins, k6, Selenium, Playwright, and CI/CD automation"
+      description: "GitHub Actions, Azure Pipelines, Jest, Selenium, Playwright, and CI/CD automation"
     }
   ];
 
@@ -75,9 +75,9 @@ export function AboutSection() {
                   on Amazon EKS. I believe in building scalable, cost-effective solutions.
                 </p>
                 <p>
-                  I'm passionate about open source contributions, having worked on KEDA's 
-                  Selenium Grid scaler and SeleniumHQ's Helm charts. I also share knowledge 
-                  through technical publications on Medium.
+                  I'm passionate about open source contributions, having worked on Selenium 
+                  Grid scaler, for KEDA and integrating it with Docker Selenium's Helm charts. 
+                  I also share knowledge through technical publications on Medium.
                 </p>
               </div>
             </div>
@@ -86,8 +86,8 @@ export function AboutSection() {
           <div className="grid grid-cols-2 gap-6">
             {[
               { number: "10+", label: "Years Experience" },
-              { number: "76%", label: "Cost Reduction" },
-              { number: "5", label: "Companies" },
+              { number: "4", label: "Languages" },
+              { number: "5", label: "Organizations" },
               { number: "2", label: "Open Source Projects" }
             ].map((stat, index) => (
               <div key={index} className="relative group">

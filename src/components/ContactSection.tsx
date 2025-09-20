@@ -210,7 +210,7 @@ export function ContactSection() {
                 <div className="flex items-start gap-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full mt-2 animate-pulse"></div>
                   <div>
-                    <h3 className="text-lg font-medium mb-3">Available for freelance work</h3>
+                    <h3 className="text-lg font-medium mb-3">Available for opportunities</h3>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       I'm currently available for new projects and opportunities.
                       Let's discuss how I can help bring your ideas to life.

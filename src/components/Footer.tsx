@@ -39,7 +39,7 @@ export function Footer() {
               onClick={scrollToTop}
               className="text-xl font-medium text-primary hover:opacity-80 transition-all duration-200 hover:scale-105"
             >
-              {"<Prashanth Ramadass/>"}
+              {"<Prashanth Ramadass />"}
             </button>
             <p className="text-muted-foreground max-w-sm leading-relaxed">
               Cloud-native Full Stack Engineer with 10+ years of experience in 

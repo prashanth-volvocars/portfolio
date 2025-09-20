@@ -11,6 +11,7 @@ export function Header() {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
+    { name: "References", href: "#references" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -30,7 +31,7 @@ export function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-lg font-medium text-primary hover:opacity-80 transition-opacity duration-200"
           >
-            {"<Prashanth Ramadass/>"}
+            {"<Prashanth Ramadass />"}
           </button>
 
           {/* Desktop Navigation */}

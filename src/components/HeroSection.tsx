@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, GitBranch } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { SimpleTypewriter } from "./ui/typewriter";
 
@@ -63,7 +63,7 @@ export function HeroSection() {
                 <p className="text-xl lg:text-2xl text-muted-foreground max-w-xl leading-relaxed">
                   Cloud-native Full Stack Engineer with
                   <span className="text-foreground font-medium"> 10+ years </span>
-                  of expertise in distributed systems, Kubernetes, and modern web technologies.
+                  of expertise in distributed systems, architecture, and modern web technologies.
                 </p>
               </div>
             </div>
@@ -81,9 +81,9 @@ export function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="px-8 py-3 text-base border-2 hover:bg-muted/50 transition-all duration-300"
-                onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" })}
               >
-                View My Work
+                View My Experience
               </Button>
             </div>
 
